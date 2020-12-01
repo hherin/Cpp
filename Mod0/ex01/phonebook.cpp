@@ -6,7 +6,7 @@
 /*   By: heleneherin <heleneherin@student.42.fr>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/30 19:19:51 by heleneherin       #+#    #+#             */
-/*   Updated: 2020/12/01 12:17:52 by heleneherin      ###   ########.fr       */
+/*   Updated: 2020/12/01 19:17:21 by heleneherin      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -80,7 +80,7 @@ int print_border(int detail = 0)
 
 void Contact::show_all_data(void) const
 {
-	std::string loop=("a");
+	std::string loop;
 	std::cout << "First name: " << first_n << std::endl;
 	std::cout << "Last name: " << last_n << std::endl;
 	std::cout << "Nickname: " << nickname << std::endl;
@@ -116,10 +116,13 @@ void Phonebook:: display_phonebook(int index) const
 		i++;
 	}
 	(index > 0) ? print_border() : 0;
-	std::cout << "Which index you want to print ?\n";
-	std::getline(std::cin, nb);
+	do{
+		std::cout << "Which index you want to print ?\n";
+		std::getline(std::cin, nb);
+		i = nb[0] - 48;
+	} while (!(i > 0 && i < 9));
 	std::cout << std::endl;
-	cct[std::stoi(nb) - 1].show_all_data();
+	cct[i - 1].show_all_data();
 }
 
 void Phonebook::input_process(int opt)
