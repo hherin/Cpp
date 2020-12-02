@@ -6,7 +6,7 @@
 /*   By: heleneherin <heleneherin@student.42.fr>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/02 12:38:09 by heleneherin       #+#    #+#             */
-/*   Updated: 2020/12/02 12:54:23 by heleneherin      ###   ########.fr       */
+/*   Updated: 2020/12/02 16:35:53 by heleneherin      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,6 +28,7 @@ void ponyOnTheStack(void)
 
 int main(void)
 {
+	srand(time(NULL));
 	ponyOnTheHeap();
 	ponyOnTheHeap();
 

@@ -6,7 +6,7 @@
 /*   By: heleneherin <heleneherin@student.42.fr>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/02 11:49:26 by heleneherin       #+#    #+#             */
-/*   Updated: 2020/12/02 13:04:19 by heleneherin      ###   ########.fr       */
+/*   Updated: 2020/12/02 16:35:38 by heleneherin      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ void Pony::create_randompony(std::string pos)
 {
 	int nb = 4;
 	bool bo;
-	srand(time(NULL));
+	
 	std::cout << "Your Pony" << pos << "created\n";
 
 	bo = rand() % 2;
