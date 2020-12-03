@@ -6,7 +6,7 @@
 /*   By: heleneherin <heleneherin@student.42.fr>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/03 00:48:17 by heleneherin       #+#    #+#             */
-/*   Updated: 2020/12/03 14:20:52 by heleneherin      ###   ########.fr       */
+/*   Updated: 2020/12/03 17:53:03 by heleneherin      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,8 +40,11 @@ int fileClass::fileInBuf(void)
 	std::ofstream outfile(repFilename.c_str());
 	buf << fich.rdbuf(); // copier l'intégralité du fichier dans le buffer
 	line = buf.str();
-	while ((found = line.find(rep1.c_str())) != std::string::npos)
+	found = line.find(rep1.c_str());
+	while (found != std::string::npos){
 		line.replace(found, rep1.length(), rep2.c_str());
+		found = line.find(rep1.c_str(), found + strlen(rep2.c_str()));
+	}
 	outfile << line;
 	outfile.close();
 	return (1);
