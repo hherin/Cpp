@@ -6,7 +6,7 @@
 /*   By: heleneherin <heleneherin@student.42.fr>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/03 00:45:02 by heleneherin       #+#    #+#             */
-/*   Updated: 2020/12/03 12:46:00 by heleneherin      ###   ########.fr       */
+/*   Updated: 2020/12/03 12:48:45 by heleneherin      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,8 @@
 # define FILECHECKER_HPP
 
 #include <fstream>
+#include <sstream>
+#include <iostream>
 
 class fileClass
 {

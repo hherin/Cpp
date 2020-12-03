@@ -6,12 +6,10 @@
 /*   By: heleneherin <heleneherin@student.42.fr>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/03 00:34:03 by heleneherin       #+#    #+#             */
-/*   Updated: 2020/12/03 12:15:19 by heleneherin      ###   ########.fr       */
+/*   Updated: 2020/12/03 12:48:58 by heleneherin      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <string>
-#include <iostream>
 #include "fileChecker.hpp"
 
 int main(int ac, char **av)

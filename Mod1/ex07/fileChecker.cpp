@@ -6,13 +6,11 @@
 /*   By: heleneherin <heleneherin@student.42.fr>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/03 00:48:17 by heleneherin       #+#    #+#             */
-/*   Updated: 2020/12/03 12:46:36 by heleneherin      ###   ########.fr       */
+/*   Updated: 2020/12/03 12:48:34 by heleneherin      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "fileChecker.hpp"
-#include <iostream>
-#include <sstream>
 
 void fileClass::setAttribut(const std::string s, const std::string s1, const std::string s2)
 {
