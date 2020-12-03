@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: heleneherin <heleneherin@student.42.fr>    +#+  +:+       +#+        */
+/*   By: user42 <user42@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/02 16:49:23 by heleneherin       #+#    #+#             */
-/*   Updated: 2020/12/02 17:49:52 by heleneherin      ###   ########.fr       */
+/*   Updated: 2020/12/03 13:02:58 by user42           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,6 +19,8 @@ int main(void)
 	Zombie *zombie, *zombie2, *zombie3;
 
 	srand(time(0));
+	std::cout << "Welcome to Zombieland\n";
+	std::cout << std::endl;
 	{
 		Zombie zombie3;
 		zombie3.set_ZombieType("pimpled");
