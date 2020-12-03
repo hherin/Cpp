@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ex01.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: heleneherin <heleneherin@student.42.fr>    +#+  +:+       +#+        */
+/*   By: user42 <user42@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/02 13:16:38 by heleneherin       #+#    #+#             */
-/*   Updated: 2020/12/02 13:18:11 by heleneherin      ###   ########.fr       */
+/*   Updated: 2020/12/03 13:00:05 by user42           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,6 +23,5 @@ void memoryLeak()
 int main(void)
 {
 	memoryLeak();
-	system("leaks memleak");
 	return (0);
 }
