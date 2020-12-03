@@ -8,7 +8,7 @@ HDRS	=	fileChecker.hpp
 
 GCC		=	clang++
 
-FLAGS	=	-Werror -Wextra -Wall -std=c++98 -g3 -fsanitize=address
+FLAGS	=	-Werror -Wextra -Wall -std=c++98
 
 all	:		${NAME}
 
