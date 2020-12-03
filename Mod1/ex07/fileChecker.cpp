@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   fileChecker.cpp                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: user42 <user42@student.42.fr>              +#+  +:+       +#+        */
+/*   By: heleneherin <heleneherin@student.42.fr>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/03 00:48:17 by heleneherin       #+#    #+#             */
-/*   Updated: 2020/12/03 13:13:13 by user42           ###   ########.fr       */
+/*   Updated: 2020/12/03 14:20:52 by heleneherin      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,6 +30,11 @@ int fileClass::fileInBuf(void)
 	if (!fich){
 		std::cout << "Can't open the file\n";
 		return 0;
+	}
+	if (rep1.empty() || rep2.empty())
+	{
+		std::cout << "Can't handle empty string output\n";
+		return (0);
 	}
 	repFilename = filename.append("replace");
 	std::ofstream outfile(repFilename.c_str());
