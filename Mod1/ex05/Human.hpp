@@ -6,7 +6,7 @@
 /*   By: heleneherin <heleneherin@student.42.fr>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/02 21:04:24 by heleneherin       #+#    #+#             */
-/*   Updated: 2020/12/02 22:24:12 by heleneherin      ###   ########.fr       */
+/*   Updated: 2020/12/03 11:23:27 by heleneherin      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ class Human
 {
 	public:
 		std::string identify() const;
-		Brain getBrain();
+		const Brain& getBrain();
 
 	private:
 		Brain const brain;

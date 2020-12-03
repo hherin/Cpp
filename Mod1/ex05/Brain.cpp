@@ -6,7 +6,7 @@
 /*   By: heleneherin <heleneherin@student.42.fr>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/02 21:36:49 by heleneherin       #+#    #+#             */
-/*   Updated: 2020/12/02 22:06:47 by heleneherin      ###   ########.fr       */
+/*   Updated: 2020/12/03 11:21:26 by heleneherin      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,9 +19,7 @@ Brain::Brain(): neurone(1)
 std::string Brain::identify() const
 {
 	std::ostringstream oss;
-	std::string add;
-
-	oss << &neurone;
-	add = oss.str();
-	return (add);
+	(void)neurone;
+	oss << this;
+	return (oss.str());
 }

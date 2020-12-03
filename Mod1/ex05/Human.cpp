@@ -6,13 +6,13 @@
 /*   By: heleneherin <heleneherin@student.42.fr>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/02 21:36:06 by heleneherin       #+#    #+#             */
-/*   Updated: 2020/12/02 22:24:08 by heleneherin      ###   ########.fr       */
+/*   Updated: 2020/12/03 11:24:36 by heleneherin      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Human.hpp"
 
-Brain Human::getBrain()
+const Brain& Human::getBrain()
 {
 	return (brain);
 }
