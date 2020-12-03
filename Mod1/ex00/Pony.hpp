@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Pony.hpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: heleneherin <heleneherin@student.42.fr>    +#+  +:+       +#+        */
+/*   By: user42 <user42@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/01 20:09:42 by heleneherin       #+#    #+#             */
-/*   Updated: 2020/12/02 13:04:44 by heleneherin      ###   ########.fr       */
+/*   Updated: 2020/12/03 12:58:34 by user42           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,7 @@
 #include <iostream>
 #include <time.h>
 #include <string>
+#include <cstdlib>
 
 class Pony
 {
