@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Fixed.cpp                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: user42 <user42@student.42.fr>              +#+  +:+       +#+        */
+/*   By: heleneherin <heleneherin@student.42.fr>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/04 11:16:17 by heleneherin       #+#    #+#             */
-/*   Updated: 2020/12/07 17:39:43 by user42           ###   ########.fr       */
+/*   Updated: 2020/12/07 18:52:55 by heleneherin      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,7 +32,7 @@ Fixed::Fixed(const int nb)
 Fixed::Fixed(const float nb)
 {
 	std::cout << "Float constructor called\n";
-	fixedPoint = nb * (float)(1 << fractBit);
+	fixedPoint = round(nb * (float)(1 << fractBit));
 }
 
 Fixed& Fixed::operator=(const Fixed &cp)
