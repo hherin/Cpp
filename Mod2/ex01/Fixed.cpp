@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Fixed.cpp                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: heleneherin <heleneherin@student.42.fr>    +#+  +:+       +#+        */
+/*   By: user42 <user42@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/04 11:16:17 by heleneherin       #+#    #+#             */
-/*   Updated: 2020/12/04 15:38:05 by heleneherin      ###   ########.fr       */
+/*   Updated: 2020/12/07 17:39:43 by user42           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,11 +25,13 @@ Fixed::Fixed(const Fixed &cp)
 
 Fixed::Fixed(const int nb)
 {
+	std::cout << "Int constructor called\n";
 	fixedPoint = nb << fractBit;
 }
 
 Fixed::Fixed(const float nb)
 {
+	std::cout << "Float constructor called\n";
 	fixedPoint = nb * (float)(1 << fractBit);
 }
 
@@ -38,7 +40,7 @@ Fixed& Fixed::operator=(const Fixed &cp)
 	std::cout << "Assignation operator called\n";
 	if (this == &cp)
 		return (*this);
-	fixedPoint = cp.getRawBits();
+	fixedPoint = cp.fixedPoint;
 	return (*this);
 }
 
