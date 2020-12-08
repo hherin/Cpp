@@ -6,7 +6,7 @@
 /*   By: heleneherin <heleneherin@student.42.fr>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/04 11:16:17 by heleneherin       #+#    #+#             */
-/*   Updated: 2020/12/07 18:52:55 by heleneherin      ###   ########.fr       */
+/*   Updated: 2020/12/08 11:06:54 by heleneherin      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ Fixed::Fixed(): fixedPoint(0)
 Fixed::Fixed(const Fixed &cp)
 {
 	std::cout << "Copy constructor called\n";
-	fixedPoint = cp.fixedPoint;
+	*this = cp;
 }
 
 Fixed::Fixed(const int nb)
