@@ -6,17 +6,17 @@
 /*   By: heleneherin <heleneherin@student.42.fr>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/08 11:20:14 by heleneherin       #+#    #+#             */
-/*   Updated: 2020/12/08 19:23:41 by heleneherin      ###   ########.fr       */
+/*   Updated: 2020/12/09 19:32:40 by heleneherin      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Fragtrap.hpp"
+#include "FragTrap.hpp"
 #include "ScavTrap.hpp"
 
 int main(void)
 {
 	srand(time(0));
-	Fragtrap fragtp("Bib");
+	FragTrap fragtp("Bib");
 	fragtp.rangedAttack("grumo");
 	ScavTrap scavtp("Juj");
 	fragtp.takeDamage(30);

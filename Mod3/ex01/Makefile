@@ -1,10 +1,10 @@
 NAME	= 	Sc4vtp
 
-SRCS	=	main.cpp Fragtrap.cpp ScavTrap.cpp
+SRCS	=	main.cpp FragTrap.cpp ScavTrap.cpp
 
 OBJS	=	${SRCS:.cpp=.o}
 
-HDRS	=	Fragtrap.hpp ScavTrap.hpp
+HDRS	=	FragTrap.hpp ScavTrap.hpp
 
 GCC		=	clang++
 

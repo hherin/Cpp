@@ -6,7 +6,7 @@
 /*   By: heleneherin <heleneherin@student.42.fr>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/08 18:19:43 by heleneherin       #+#    #+#             */
-/*   Updated: 2020/12/08 19:24:07 by heleneherin      ###   ########.fr       */
+/*   Updated: 2020/12/09 19:34:27 by heleneherin      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,6 +19,37 @@ ScavTrap::ScavTrap(std::string n)
 {
 	name = n;
 	std::cout << "SC4V-TP <" << name << "> of level <" << level << "> is created\n";
+}
+
+ScavTrap::ScavTrap(const ScavTrap &cp)
+{
+	std::cout << "ScavTrap copy constructor called\n";
+	this->hitPoint = cp.hitPoint;
+	this->maxHitPoint = cp.maxHitPoint;
+	this->energyPoint = cp.energyPoint;
+	this->maxHitPoint = cp.maxHitPoint;
+	this->level = cp.level;
+	this->name = cp.name;
+	this->meleAttack = cp.meleAttack;
+	this->rangeAttack = cp.rangeAttack;
+	this->armorDamage = cp.armorDamage;
+}
+
+ScavTrap& ScavTrap::operator=(const ScavTrap &cp)
+{
+	std::cout << "ScavTrap assignation operator called\n";
+	if (this == &cp)
+		return (*this);
+	this->hitPoint = cp.hitPoint;
+	this->maxHitPoint = cp.maxHitPoint;
+	this->energyPoint = cp.energyPoint;
+	this->maxHitPoint = cp.maxHitPoint;
+	this->level = cp.level;
+	this->name = cp.name;
+	this->meleAttack = cp.meleAttack;
+	this->rangeAttack = cp.rangeAttack;
+	this->armorDamage = cp.armorDamage;
+	return (*this);
 }
 
 ScavTrap::~ScavTrap()

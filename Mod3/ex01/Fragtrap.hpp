@@ -6,7 +6,7 @@
 /*   By: heleneherin <heleneherin@student.42.fr>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/08 10:57:37 by heleneherin       #+#    #+#             */
-/*   Updated: 2020/12/08 11:59:15 by heleneherin      ###   ########.fr       */
+/*   Updated: 2020/12/09 19:30:51 by heleneherin      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,11 +18,13 @@
 # include <time.h>
 # include <cstdlib>
 
-class Fragtrap
+class FragTrap
 {
 	public:
-		Fragtrap(std::string);
-		~Fragtrap();
+		FragTrap(std::string);
+		FragTrap(const FragTrap&);
+		FragTrap& operator=(const FragTrap&);
+		~FragTrap();
 		void rangedAttack(std::string const &);
 		void meleeAttack(std::string const &);
 		void takeDamage(unsigned int);

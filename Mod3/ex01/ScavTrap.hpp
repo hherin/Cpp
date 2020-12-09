@@ -6,7 +6,7 @@
 /*   By: heleneherin <heleneherin@student.42.fr>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/08 18:12:20 by heleneherin       #+#    #+#             */
-/*   Updated: 2020/12/08 18:22:49 by heleneherin      ###   ########.fr       */
+/*   Updated: 2020/12/09 19:33:39 by heleneherin      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,6 +19,8 @@ class ScavTrap
 {
 	public:
 		ScavTrap(std::string);
+		ScavTrap(const ScavTrap &);
+		ScavTrap& operator=(const ScavTrap &cp);
 		~ScavTrap();
 		void rangedAttack(std::string const &);
 		void meleeAttack(std::string const &);
