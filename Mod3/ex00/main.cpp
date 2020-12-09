@@ -6,16 +6,16 @@
 /*   By: heleneherin <heleneherin@student.42.fr>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/08 11:20:14 by heleneherin       #+#    #+#             */
-/*   Updated: 2020/12/08 18:10:40 by heleneherin      ###   ########.fr       */
+/*   Updated: 2020/12/09 19:25:54 by heleneherin      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Fragtrap.hpp"
+#include "FragTrap.hpp"
 
 int main(void)
 {
 	srand(time(0));
-	Fragtrap fragtp("bib");
+	FragTrap fragtp("bib");
 	fragtp.rangedAttack("grumo");
 	fragtp.takeDamage(30);
 	fragtp.meleeAttack("grumo");

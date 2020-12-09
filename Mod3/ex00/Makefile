@@ -1,10 +1,10 @@
-NAME	= 	Fr4gtp
+NAME	= 	fragtrap
 
-SRCS	=	main.cpp Fragtrap.cpp
+SRCS	=	main.cpp FragTrap.cpp
 
 OBJS	=	${SRCS:.cpp=.o}
 
-HDRS	=	Fragtrap.hpp
+HDRS	=	FragTrap.hpp
 
 GCC		=	clang++
 

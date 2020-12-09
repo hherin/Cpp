@@ -6,39 +6,70 @@
 /*   By: heleneherin <heleneherin@student.42.fr>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/08 11:10:59 by heleneherin       #+#    #+#             */
-/*   Updated: 2020/12/08 19:24:18 by heleneherin      ###   ########.fr       */
+/*   Updated: 2020/12/09 19:28:28 by heleneherin      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Fragtrap.hpp"
+#include "FragTrap.hpp"
 
-Fragtrap::Fragtrap(std::string n)
+FragTrap::FragTrap(std::string n)
 	: hitPoint(100), maxHitPoint(100), energyPoint(100), maxEnergyPoint(100),
 	level(1), meleAttack(30), rangeAttack(20), armorDamage(5)
 {
 	name = n;
-	std::cout << "FR4G-TP <" << name << "> of level <" << level << "> is created\n";
+	std::cout << "FragTrap <" << name << "> of level <" << level << "> is created\n";
 }
 
-Fragtrap::~Fragtrap()
+FragTrap::FragTrap(const FragTrap&cp)
 {
-	std::cout << "FR4G-TP <" << name << "> has been deleted\n";
+	std::cout << "FragTrap copy constructor called\n";
+	this->hitPoint = cp.hitPoint;
+	this->maxHitPoint = cp.maxHitPoint;
+	this->energyPoint = cp.energyPoint;
+	this->maxEnergyPoint = cp.maxEnergyPoint;
+	this->level = cp.level;
+	this->name = cp.name;
+	this->meleAttack = cp.meleAttack;
+	this->rangeAttack = cp.rangeAttack;
+	this->armorDamage = cp.armorDamage;
 }
 
-void Fragtrap::rangedAttack(std::string const &target)
+FragTrap& FragTrap::operator=(const FragTrap &cp)
+{
+	std::cout << "FragTrap assigation operator called\n";
+	if (this == &cp)
+		return (*this);
+	this->hitPoint = cp.hitPoint;
+	this->maxHitPoint = cp.maxHitPoint;
+	this->energyPoint = cp.energyPoint;
+	this->maxHitPoint = cp.maxHitPoint;
+	this->level = cp.level;
+	this->name = cp.name;
+	this->meleAttack = cp.meleAttack;
+	this->rangeAttack = cp.rangeAttack;
+	this->armorDamage = cp.armorDamage;
+	return (*this);
+}
+
+FragTrap::~FragTrap()
+{
+	std::cout << "FragTrap <" << name << "> has been deleted\n";
+}
+
+void FragTrap::rangedAttack(std::string const &target)
 {
 	std::cout << "FR4G-TP <" << name << "> attacks <" << target;
 	std::cout << "> at range, causing <" << rangeAttack << "> point of damage!\n";
 }
 
-void Fragtrap::meleeAttack(std::string const &target)
+void FragTrap::meleeAttack(std::string const &target)
 {
 	hitPoint--;
 	std::cout << "FR4G-TP <" << name << "> attacks <" << target;
 	std::cout << "> at melee, causing <" << meleAttack << "> point of damage!\n";
 }
 
-void Fragtrap::takeDamage(unsigned int amount)
+void FragTrap::takeDamage(unsigned int amount)
 {
 	hitPoint -= amount - armorDamage;
 	hitPoint = (hitPoint < 0) ? 0 : hitPoint;
@@ -46,7 +77,7 @@ void Fragtrap::takeDamage(unsigned int amount)
 	std::cout << "it has <" << hitPoint << "> hit points left...\n";
 }
 
-void Fragtrap::beRepaired(unsigned int amount)
+void FragTrap::beRepaired(unsigned int amount)
 {
 	energyPoint += amount;
 	energyPoint = (energyPoint > maxEnergyPoint) ? maxEnergyPoint : energyPoint;
@@ -65,7 +96,7 @@ void poolAttack(std::string name, std::string const &target)
 	std::cout << ">, causing <40> points of damage !\n";
 }
 
-void Fragtrap::vaulthunter_dot_exe(std::string const & target)
+void FragTrap::vaulthunter_dot_exe(std::string const & target)
 {
 	if (energyPoint > 25){
 		poolAttack(name, target);
