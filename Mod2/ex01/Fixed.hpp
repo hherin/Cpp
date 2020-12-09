@@ -6,7 +6,7 @@
 /*   By: heleneherin <heleneherin@student.42.fr>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/04 11:01:38 by heleneherin       #+#    #+#             */
-/*   Updated: 2020/12/04 15:33:05 by heleneherin      ###   ########.fr       */
+/*   Updated: 2020/12/09 20:19:24 by heleneherin      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,7 @@
 
 # include <iostream>
 # include <string>
+# include <math.h>
 
 class Fixed
 {
