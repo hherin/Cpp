@@ -6,7 +6,7 @@
 /*   By: heleneherin <heleneherin@student.42.fr>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/10 11:18:48 by heleneherin       #+#    #+#             */
-/*   Updated: 2020/12/10 12:48:02 by heleneherin      ###   ########.fr       */
+/*   Updated: 2020/12/10 14:45:44 by heleneherin      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ class Victim
 		Victim();
 		Victim(std::string name);
 		Victim(Victim const&);
-		~Victim();
+		virtual ~Victim();
 		Victim& operator=(Victim const&);
 		std::string& getName();
 		virtual void getPolymorphed() const;
