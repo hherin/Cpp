@@ -6,7 +6,7 @@
 /*   By: heleneherin <heleneherin@student.42.fr>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/10 12:29:41 by heleneherin       #+#    #+#             */
-/*   Updated: 2020/12/10 12:48:08 by heleneherin      ###   ########.fr       */
+/*   Updated: 2020/12/10 13:11:29 by heleneherin      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ class Peon : public Victim
 		~Peon();
 		Peon& operator=(Peon const&);
 		std::string& getName();
-		virtual void getPolymorphed() const;
+		void getPolymorphed() const;
 };
 
 #endif
