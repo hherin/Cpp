@@ -6,18 +6,14 @@
 /*   By: heleneherin <heleneherin@student.42.fr>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/10 10:45:45 by heleneherin       #+#    #+#             */
-/*   Updated: 2020/12/10 12:29:19 by heleneherin      ###   ########.fr       */
+/*   Updated: 2020/12/10 14:54:14 by heleneherin      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Sorcerer.hpp"
 
-Sorcerer::Sorcerer(): name("Merlin"), type("l'Enchanteur")
-{
-	std::cout << name << ", " << type << ", is born!\n";
-}
-
-Sorcerer::Sorcerer(std::string m_name, std::string m_type): name(m_name), type(m_type)
+Sorcerer::Sorcerer(std::string m_name, std::string m_type)
+	: name(m_name), type(m_type)
 {
 	std::cout << name << ", " << type << ", is born!\n";
 }

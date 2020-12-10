@@ -6,7 +6,7 @@
 /*   By: heleneherin <heleneherin@student.42.fr>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/10 10:45:41 by heleneherin       #+#    #+#             */
-/*   Updated: 2020/12/10 12:28:42 by heleneherin      ###   ########.fr       */
+/*   Updated: 2020/12/10 14:58:22 by heleneherin      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,8 +19,7 @@
 class Sorcerer
 {
 	public:
-		Sorcerer();
-		Sorcerer(std::string name, std::string type);
+		Sorcerer(std::string name="Merlin", std::string type="l'Echanteur");
 		Sorcerer(Sorcerer const&);
 		~Sorcerer();
 		Sorcerer& operator=(Sorcerer const&);

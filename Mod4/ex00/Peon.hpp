@@ -6,7 +6,7 @@
 /*   By: heleneherin <heleneherin@student.42.fr>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/10 12:29:41 by heleneherin       #+#    #+#             */
-/*   Updated: 2020/12/10 13:11:29 by heleneherin      ###   ########.fr       */
+/*   Updated: 2020/12/10 14:57:53 by heleneherin      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,8 +18,7 @@
 class Peon : public Victim
 {
 	public:
-		Peon();
-		Peon(std::string name);
+		Peon(std::string name="Kevin");
 		Peon(Peon const&);
 		~Peon();
 		Peon& operator=(Peon const&);

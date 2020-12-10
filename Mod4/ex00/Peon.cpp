@@ -6,19 +6,14 @@
 /*   By: heleneherin <heleneherin@student.42.fr>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/10 12:38:27 by heleneherin       #+#    #+#             */
-/*   Updated: 2020/12/10 12:44:27 by heleneherin      ###   ########.fr       */
+/*   Updated: 2020/12/10 14:55:42 by heleneherin      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Peon.hpp"
 
-
-Peon::Peon() : Victim()
-{
-	std::cout << "Zog zog.\n";
-}
-
-Peon::Peon(std::string m_name) : Victim(m_name)
+Peon::Peon(std::string m_name)
+	: Victim(m_name)
 {
 	std::cout <<  "Zog zog.\n";
 }

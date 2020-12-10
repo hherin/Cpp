@@ -6,18 +6,14 @@
 /*   By: heleneherin <heleneherin@student.42.fr>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/10 11:18:45 by heleneherin       #+#    #+#             */
-/*   Updated: 2020/12/10 12:47:07 by heleneherin      ###   ########.fr       */
+/*   Updated: 2020/12/10 14:55:02 by heleneherin      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Victim.hpp"
 
-Victim::Victim() : name("Kevin")
-{
-	std::cout << "A random victim called Kevin just appeared!\n";
-}
-
-Victim::Victim(std::string m_name) : name(m_name)
+Victim::Victim(std::string m_name)
+	: name(m_name)
 {
 	std::cout << "A random victim called " << name << " just appeared!\n";
 }

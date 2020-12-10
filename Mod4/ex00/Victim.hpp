@@ -6,7 +6,7 @@
 /*   By: heleneherin <heleneherin@student.42.fr>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/10 11:18:48 by heleneherin       #+#    #+#             */
-/*   Updated: 2020/12/10 14:45:44 by heleneherin      ###   ########.fr       */
+/*   Updated: 2020/12/10 14:57:46 by heleneherin      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,8 +18,7 @@
 class Victim
 {
 	public:
-		Victim();
-		Victim(std::string name);
+		Victim(std::string name="Kevin");
 		Victim(Victim const&);
 		virtual ~Victim();
 		Victim& operator=(Victim const&);
