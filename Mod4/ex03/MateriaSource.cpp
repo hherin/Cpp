@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   MateriaSource.cpp                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: heleneherin <heleneherin@student.42.fr>    +#+  +:+       +#+        */
+/*   By: user42 <user42@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/11 21:47:21 by heleneherin       #+#    #+#             */
-/*   Updated: 2020/12/11 23:08:10 by heleneherin      ###   ########.fr       */
+/*   Updated: 2020/12/11 23:34:09 by user42           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,7 +40,7 @@ MateriaSource& MateriaSource::operator=(MateriaSource const &cp)
 		newMate[i] = cp._mat[i];
 		delete _mat[i];
 	}
-	delete _mat;
+	delete[] _mat;
 	_mat = newMate;
 	return (*this);
 }
@@ -49,7 +49,7 @@ MateriaSource::~MateriaSource()
 {
 	for (int i = 0; i < _idx; i++)
 		delete _mat[i];
-	delete _mat;
+	delete[] _mat;
 }
 void MateriaSource::learnMateria(AMateria *mate)
 {

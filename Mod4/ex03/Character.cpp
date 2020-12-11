@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Character.cpp                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: heleneherin <heleneherin@student.42.fr>    +#+  +:+       +#+        */
+/*   By: user42 <user42@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/11 20:56:51 by heleneherin       #+#    #+#             */
-/*   Updated: 2020/12/11 23:16:53 by heleneherin      ###   ########.fr       */
+/*   Updated: 2020/12/12 00:01:24 by user42           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@ Character::Character(Character const&cp)
 	_name = cp._name;
 	_mat = new AMateria* [4];
 	for (int i = 0; i < _idx; i++)
-		_mat[i] = cp._mat[i];
+		_mat[i] = cp._mat[i]->clone();
 	for (int i = _idx; i < 4; i++)
 		_mat[i] = 0;
 }
@@ -37,19 +37,21 @@ Character& Character::operator=(Character const &cp)
 	AMateria **newMate = new AMateria* [4];
 	for (int i = 0; i < _idx; i++)
 	{
-		newMate[i] = cp._mat[i];
+		newMate[i] = cp._mat[i]->clone();
 		delete _mat[i];
 	}
 	for (int i = _idx; i < 4; i++)
 		newMate[i] = 0;
-	delete _mat;
+	delete[] _mat;
 	_mat = newMate;
 	return (*this);
 }
 
 Character::~Character()
 {
-	delete _mat;
+	for (int i = 0; i < 4; i++)
+		delete _mat[i];
+	delete[] _mat;
 }
 
 std::string const & Character::getName() const
@@ -61,7 +63,15 @@ void Character::equip(AMateria* m)
 {
 	if (_idx == 3)
 		return ;
-	_mat[_idx] = m;
+	int i = 0;
+	while (i < 4)
+	{
+		if (!_mat[i]){
+			_mat[i] = m;
+			break;
+		}
+		i++;
+	}
 	_idx++;
 }
 
@@ -70,15 +80,7 @@ void Character::unequip(int idx)
 	if (idx > _idx)
 		return ;
 	_mat[idx] = 0;
-	if (idx < _idx)
-	{
-		int j;
-		for (int i = idx; i < 3; i++)
-		{
-			j = idx + 1;
-			_mat[i] = _mat[j];
-		}
-	}
+	_idx--;
 }
 
 void Character::use(int idx, ICharacter& target)
