@@ -6,7 +6,7 @@
 /*   By: heleneherin <heleneherin@student.42.fr>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/10 16:11:09 by heleneherin       #+#    #+#             */
-/*   Updated: 2020/12/10 19:04:03 by heleneherin      ###   ########.fr       */
+/*   Updated: 2020/12/11 12:47:10 by heleneherin      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,21 +19,25 @@
 
 int main()
 {
-	Character* moi = new Character("me");
-	std::cout << *moi;
+	Character* me = new Character("me");
+	std::cout << *me;
 	Enemy* b = new RadScorpion();
 	AWeapon* pr = new PlasmaRifle();
 	AWeapon* pf = new PowerFist();
-	moi->equip(pr);
-	std::cout << *moi;
-	moi->equip(pf);
-	moi->attack(b);
-	std::cout << *moi;
-	moi->equip(pr);
-	std::cout << *moi;
-	moi->attack(b);
-	std::cout << *moi;
-	moi->attack(b);
-	std::cout << *moi;
+	me->equip(pr);
+	std::cout << *me;
+	me->equip(pf);
+	me->attack(b);
+	std::cout << *me;
+	me->equip(pr);
+	std::cout << *me;
+	me->attack(b);
+	std::cout << *me;
+	me->attack(b);
+	std::cout << *me;
+	Enemy *c = new SuperMutant();
+	me->attack(c);
+	std::cout << *me;
+
 return 0;
 }
