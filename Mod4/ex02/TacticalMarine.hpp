@@ -6,7 +6,7 @@
 /*   By: heleneherin <heleneherin@student.42.fr>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/11 13:31:13 by heleneherin       #+#    #+#             */
-/*   Updated: 2020/12/11 16:10:47 by heleneherin      ###   ########.fr       */
+/*   Updated: 2020/12/12 12:46:48 by heleneherin      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,6 @@ class TacticalMarine : public ISpaceMarine
 	public:
 		TacticalMarine();
 		~TacticalMarine();
-		TacticalMarine(TacticalMarine const&){}
 		virtual ISpaceMarine* clone() const;
 		virtual void battleCry() const;
 		virtual void rangedAttack() const;

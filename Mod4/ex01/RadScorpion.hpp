@@ -6,7 +6,7 @@
 /*   By: heleneherin <heleneherin@student.42.fr>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/10 17:42:53 by heleneherin       #+#    #+#             */
-/*   Updated: 2020/12/11 11:19:48 by heleneherin      ###   ########.fr       */
+/*   Updated: 2020/12/12 12:47:15 by heleneherin      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,6 @@ class RadScorpion : public Enemy
 		RadScorpion(RadScorpion const&);
 		RadScorpion& operator=(RadScorpion const&);
 		~RadScorpion();
-		// virtual void takeDamage(int);
 };
 
 #endif

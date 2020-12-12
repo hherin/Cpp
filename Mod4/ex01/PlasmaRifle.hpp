@@ -6,7 +6,7 @@
 /*   By: heleneherin <heleneherin@student.42.fr>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/10 15:23:41 by heleneherin       #+#    #+#             */
-/*   Updated: 2020/12/10 17:24:51 by heleneherin      ###   ########.fr       */
+/*   Updated: 2020/12/12 12:47:39 by heleneherin      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ class PlasmaRifle : public AWeapon
 		PlasmaRifle(PlasmaRifle const&);
 		PlasmaRifle& operator=(PlasmaRifle const&);
 		~PlasmaRifle();
-		virtual void attack() const;
+		void attack() const;
 };
 
 
