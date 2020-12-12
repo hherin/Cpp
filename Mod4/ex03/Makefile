@@ -8,7 +8,7 @@ HDRS	=	Ice.hpp Cure.cpp AMateria.hpp ICharacter.hpp IMateriaSource.hpp
 
 GCC		=	clang++
 
-FLAGS	=	-Werror -Wextra -Wall -std=c++98
+FLAGS	=	-Werror -Wextra -Wall -std=c++98 -g3 -fsanitize=address
 
 all	:		${NAME}
 

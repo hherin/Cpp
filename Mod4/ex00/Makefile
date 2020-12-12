@@ -13,10 +13,10 @@ FLAGS	=	-Werror -Wextra -Wall -std=c++98
 all	:		${NAME}
 
 ${NAME}	:	${OBJS}
-			${GCC} ${FLAGS} -o ${NAME} ${OBJS}
+			${GCC} ${FLAGS} -o ${NAME} ${OBJS} -g3 -fsanitize=address
 
 %.o	:		%.cpp
-			${GCC} ${FLAGS} -o $@ -c $<
+			${GCC} ${FLAGS} -o $@ -c $< -g3 -fsanitize=address
 
 ${OBJS}	:	${HDRS}
 

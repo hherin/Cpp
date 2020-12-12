@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: heleneherin <heleneherin@student.42.fr>    +#+  +:+       +#+        */
+/*   By: user42 <user42@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/10 16:11:09 by heleneherin       #+#    #+#             */
-/*   Updated: 2020/12/11 12:47:10 by heleneherin      ###   ########.fr       */
+/*   Updated: 2020/12/12 10:31:26 by user42           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,6 +38,9 @@ int main()
 	Enemy *c = new SuperMutant();
 	me->attack(c);
 	std::cout << *me;
+	delete me;
+	delete pf;
+	delete c;
 
 return 0;
 }

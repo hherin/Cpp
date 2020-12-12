@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   AssaultTerminator.hpp                              :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: heleneherin <heleneherin@student.42.fr>    +#+  +:+       +#+        */
+/*   By: user42 <user42@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/11 15:12:14 by heleneherin       #+#    #+#             */
-/*   Updated: 2020/12/11 15:15:18 by heleneherin      ###   ########.fr       */
+/*   Updated: 2020/12/12 11:17:26 by user42           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,6 @@ class AssaultTerminator : public ISpaceMarine
 {
 	public:
 		AssaultTerminator();
-		AssaultTerminator(AssaultTerminator const&){}
 		~AssaultTerminator();
 		virtual ISpaceMarine* clone() const;
 		virtual void battleCry() const;

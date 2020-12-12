@@ -8,7 +8,7 @@ HDRS	=	AssaultTerminator.hpp TacticalMarine.hpp ISpaceMarine.hpp ISquad.hpp Squa
 
 GCC		=	clang++
 
-FLAGS	=	-Werror -Wextra -Wall -std=c++98
+FLAGS	=	-Werror -Wextra -Wall -std=c++98 -g3 -fsanitize=address
 
 all	:		${NAME}
 

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   AssaultTerminator.cpp                              :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: heleneherin <heleneherin@student.42.fr>    +#+  +:+       +#+        */
+/*   By: user42 <user42@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/11 15:14:06 by heleneherin       #+#    #+#             */
-/*   Updated: 2020/12/11 15:56:01 by heleneherin      ###   ########.fr       */
+/*   Updated: 2020/12/12 11:17:19 by user42           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ AssaultTerminator::~AssaultTerminator()
 
 ISpaceMarine* AssaultTerminator::clone() const
 {
-	ISpaceMarine *newMarine = new AssaultTerminator(*this);
+	ISpaceMarine *newMarine = new AssaultTerminator();
 	return (newMarine);
 }
 

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: heleneherin <heleneherin@student.42.fr>    +#+  +:+       +#+        */
+/*   By: user42 <user42@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/11 11:57:03 by heleneherin       #+#    #+#             */
-/*   Updated: 2020/12/11 18:16:12 by heleneherin      ###   ########.fr       */
+/*   Updated: 2020/12/12 11:29:59 by user42           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,9 +40,11 @@ int main()
 
 	std::cout << "\nFirst wave of reinforcements launched:\n";
 	Squad reinforcements;
-	reinforcements.push(bob->clone());
-	reinforcements.push(jim->clone());
-
+	ISpaceMarine *clone1 = bob->clone();
+	reinforcements.push(clone1);
+	ISpaceMarine *clone2 = jim->clone();
+	reinforcements.push(clone2);
+	std::cout << reinforcements.getCount() << std::endl;
 	std::cout << "\nSecond wave of reinforcements launched:\n";
 	Squad reinforcements2(reinforcements);
 
@@ -79,6 +81,11 @@ int main()
 	}
 	std::cout << "\nDeleting heap allocation:\n\n";
 	delete vlc;
+	delete bob;
+	delete jim;
+	delete tom;
+	delete clone1;
+	delete clone2;
 	std::cout << "\nDeleting stack allocation:\n\n";
 	return (0);
 }

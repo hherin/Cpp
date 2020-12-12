@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   TacticalMarine.cpp                                 :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: heleneherin <heleneherin@student.42.fr>    +#+  +:+       +#+        */
+/*   By: user42 <user42@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/11 14:31:47 by heleneherin       #+#    #+#             */
-/*   Updated: 2020/12/11 15:11:38 by heleneherin      ###   ########.fr       */
+/*   Updated: 2020/12/12 11:13:41 by user42           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ TacticalMarine::~TacticalMarine()
 
 ISpaceMarine* TacticalMarine::clone() const
 {
-	ISpaceMarine *newMarine = new TacticalMarine(*this);
+	ISpaceMarine *newMarine = new TacticalMarine();
 	return (newMarine);
 }
 
