@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   RadScorpion.cpp                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: heleneherin <heleneherin@student.42.fr>    +#+  +:+       +#+        */
+/*   By: user42 <user42@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/10 17:42:55 by heleneherin       #+#    #+#             */
-/*   Updated: 2020/12/11 11:22:14 by heleneherin      ###   ########.fr       */
+/*   Updated: 2020/12/12 12:08:23 by user42           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,13 +37,3 @@ RadScorpion::~RadScorpion()
 {
 	std::cout << "* SPROTCH *\n";
 }
-
-
-
-// void RadScorpion::takeDamage(int dam)
-// {
-// 	dam -= 3;
-// 	if (_hp < dam)
-// 		return ;
-// 	_hp -= dam;
-// }

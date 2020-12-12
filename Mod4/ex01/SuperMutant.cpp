@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   SuperMutant.cpp                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: heleneherin <heleneherin@student.42.fr>    +#+  +:+       +#+        */
+/*   By: user42 <user42@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/10 17:35:21 by heleneherin       #+#    #+#             */
-/*   Updated: 2020/12/10 18:02:46 by heleneherin      ###   ########.fr       */
+/*   Updated: 2020/12/12 12:25:15 by user42           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,7 +41,11 @@ SuperMutant::~SuperMutant()
 void SuperMutant::takeDamage(int dam)
 {
 	dam -= 3;
-	if (_hp < dam)
+	if (dam < 0)
 		return ;
 	_hp -= dam;
+	if (0 > _hp){
+		_hp = 0;
+		delete this;
+	}
 }

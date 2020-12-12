@@ -6,7 +6,7 @@
 /*   By: user42 <user42@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/10 18:04:27 by heleneherin       #+#    #+#             */
-/*   Updated: 2020/12/12 10:24:41 by user42           ###   ########.fr       */
+/*   Updated: 2020/12/12 12:26:17 by user42           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,9 +35,7 @@ Character& Character::operator=(Character const &cp)
 }
 
 Character::~Character()
-{
-	delete _weap;
-}
+{}
 
 void Character::recoverAP()
 {
@@ -59,10 +57,6 @@ void Character::attack(Enemy *badass)
 		_weap->attack();
 		_hp -= _weap->getAPCost();
 		badass->takeDamage(_weap->getDamage());
-		if (!_hp){
-			delete _weap;
-			_weap = 0;
-		}
 	}
 
 }

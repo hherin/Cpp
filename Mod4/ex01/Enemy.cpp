@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Enemy.cpp                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: heleneherin <heleneherin@student.42.fr>    +#+  +:+       +#+        */
+/*   By: user42 <user42@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/10 17:02:51 by heleneherin       #+#    #+#             */
-/*   Updated: 2020/12/11 11:25:51 by heleneherin      ###   ########.fr       */
+/*   Updated: 2020/12/12 12:24:02 by user42           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,9 +46,10 @@ int Enemy::getHP() const
 
 void Enemy::takeDamage(int dam)
 {
+	if (dam < 0)
+		return ;
 	_hp -= dam;
-	if (_hp < 0)
-	{
+	if (_hp < 0){
 		_hp = 0;
 		delete this;
 	}
