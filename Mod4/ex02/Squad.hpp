@@ -6,7 +6,7 @@
 /*   By: heleneherin <heleneherin@student.42.fr>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/11 11:32:27 by heleneherin       #+#    #+#             */
-/*   Updated: 2020/12/11 18:09:20 by heleneherin      ###   ########.fr       */
+/*   Updated: 2020/12/16 16:13:17 by heleneherin      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ class Squad : public ISquad
 		Squad();
 		Squad(Squad const&);
 		Squad const& operator=(Squad const&);
-		~Squad();
+		virtual ~Squad();
 		int getCount() const;
 		ISpaceMarine* getUnit(int) const;
 		int push(ISpaceMarine*);

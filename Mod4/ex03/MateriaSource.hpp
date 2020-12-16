@@ -6,7 +6,7 @@
 /*   By: heleneherin <heleneherin@student.42.fr>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/11 21:46:46 by heleneherin       #+#    #+#             */
-/*   Updated: 2020/12/11 22:19:42 by heleneherin      ###   ########.fr       */
+/*   Updated: 2020/12/16 16:13:45 by heleneherin      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ class MateriaSource : public IMateriaSource
 		MateriaSource();
 		MateriaSource(MateriaSource const&);
 		MateriaSource& operator=(MateriaSource const&);
-		~MateriaSource();
+		virtual ~MateriaSource();
 		void learnMateria(AMateria*);
 		AMateria* createMateria(std::string const & type);
 

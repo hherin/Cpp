@@ -6,7 +6,7 @@
 /*   By: heleneherin <heleneherin@student.42.fr>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/10 16:56:52 by heleneherin       #+#    #+#             */
-/*   Updated: 2020/12/10 17:27:40 by heleneherin      ###   ########.fr       */
+/*   Updated: 2020/12/16 16:12:47 by heleneherin      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ class PowerFist : public AWeapon
 		PowerFist();
 		PowerFist(PowerFist const&);
 		PowerFist& operator=(PowerFist const&);
-		~PowerFist();
+		virtual ~PowerFist();
 		virtual void attack() const;
 };
 

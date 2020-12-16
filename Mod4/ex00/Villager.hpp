@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   villager.hpp                                       :+:      :+:    :+:   */
+/*   Villager.hpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: heleneherin <heleneherin@student.42.fr>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/16 11:28:44 by heleneherin       #+#    #+#             */
-/*   Updated: 2020/12/16 11:51:16 by heleneherin      ###   ########.fr       */
+/*   Updated: 2020/12/16 16:12:27 by heleneherin      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ class Villager : public Victim
 	public:
 		Villager(std::string name="Kevin");
 		Villager(Villager const&);
-		~Villager();
+		virtual ~Villager();
 		Villager& operator=(Villager const&);
 		void screamQueen() const;
 		void getPolymorphed() const;

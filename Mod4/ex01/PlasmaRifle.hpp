@@ -6,7 +6,7 @@
 /*   By: heleneherin <heleneherin@student.42.fr>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/10 15:23:41 by heleneherin       #+#    #+#             */
-/*   Updated: 2020/12/12 12:47:39 by heleneherin      ###   ########.fr       */
+/*   Updated: 2020/12/16 16:12:43 by heleneherin      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ class PlasmaRifle : public AWeapon
 		PlasmaRifle(std::string const &name="Plasma Rifle", int apcost=5, int damage=21);
 		PlasmaRifle(PlasmaRifle const&);
 		PlasmaRifle& operator=(PlasmaRifle const&);
-		~PlasmaRifle();
+		virtual ~PlasmaRifle();
 		void attack() const;
 };
 

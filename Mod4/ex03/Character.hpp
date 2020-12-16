@@ -6,7 +6,7 @@
 /*   By: heleneherin <heleneherin@student.42.fr>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/11 20:53:44 by heleneherin       #+#    #+#             */
-/*   Updated: 2020/12/11 22:20:35 by heleneherin      ###   ########.fr       */
+/*   Updated: 2020/12/16 16:13:33 by heleneherin      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ class Character : public ICharacter
 		Character(std::string="Def");
 		Character(Character const&);
 		Character& operator=(Character const&);
-		~Character();
+		virtual ~Character();
 		std::string const & getName() const;
 		void equip(AMateria* m);
 		void unequip(int idx);

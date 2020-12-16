@@ -6,7 +6,7 @@
 /*   By: heleneherin <heleneherin@student.42.fr>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/16 12:22:04 by heleneherin       #+#    #+#             */
-/*   Updated: 2020/12/16 13:09:08 by heleneherin      ###   ########.fr       */
+/*   Updated: 2020/12/16 16:13:13 by heleneherin      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ class Kamikaze : public ISquad
 		Kamikaze();
 		Kamikaze(Kamikaze const&);
 		Kamikaze const& operator=(Kamikaze const&);
-		~Kamikaze();
+		virtual ~Kamikaze();
 		int getCount() const;
 		ISpaceMarine* getUnit(int) const;
 		int push(ISpaceMarine*);
