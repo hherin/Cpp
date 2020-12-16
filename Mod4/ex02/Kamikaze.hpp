@@ -1,27 +1,36 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ISquad.hpp                                         :+:      :+:    :+:   */
+/*   Kamikaze.hpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: heleneherin <heleneherin@student.42.fr>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/12/11 11:45:10 by heleneherin       #+#    #+#             */
-/*   Updated: 2020/12/16 13:07:06 by heleneherin      ###   ########.fr       */
+/*   Created: 2020/12/16 12:22:04 by heleneherin       #+#    #+#             */
+/*   Updated: 2020/12/16 13:09:08 by heleneherin      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef ISQUAD_HPP
-# define ISQUAD_HPP
+#ifndef KAMIKAZE_HPP
+# define KAMIKAZE_HPP
 
+# include "ISquad.hpp"
 # include "ISpaceMarine.hpp"
+# include <iostream>
 
-class ISquad
+class Kamikaze : public ISquad
 {
 	public:
-		virtual ~ISquad() {}
-		virtual int getCount() const = 0;
-		virtual ISpaceMarine* getUnit(int) const = 0;
-		virtual int push(ISpaceMarine*) = 0;
+		Kamikaze();
+		Kamikaze(Kamikaze const&);
+		Kamikaze const& operator=(Kamikaze const&);
+		~Kamikaze();
+		int getCount() const;
+		ISpaceMarine* getUnit(int) const;
+		int push(ISpaceMarine*);
+
+	private:
+		ISpaceMarine **_kami;
+		int nbUnits;
 };
 
 #endif

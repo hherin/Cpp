@@ -1,10 +1,10 @@
 NAME	=	Squad
 
-SRCS	=	AssaultTerminator.cpp TacticalMarine.cpp Squad.cpp main.cpp
+SRCS	=	Kamikaze.cpp AssaultTerminator.cpp TacticalMarine.cpp Squad.cpp main.cpp
 
 OBJS	=	${SRCS:.cpp=.o}
 
-HDRS	=	AssaultTerminator.hpp TacticalMarine.hpp ISpaceMarine.hpp ISquad.hpp Squad.hpp
+HDRS	=	Kamikaze.hpp AssaultTerminator.hpp TacticalMarine.hpp ISpaceMarine.hpp ISquad.hpp Squad.hpp
 
 GCC		=	clang++
 

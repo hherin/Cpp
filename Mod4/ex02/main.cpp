@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: user42 <user42@student.42.fr>              +#+  +:+       +#+        */
+/*   By: heleneherin <heleneherin@student.42.fr>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/11 11:57:03 by heleneherin       #+#    #+#             */
-/*   Updated: 2020/12/12 11:29:59 by user42           ###   ########.fr       */
+/*   Updated: 2020/12/16 13:39:33 by heleneherin      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,7 @@
 #include "TacticalMarine.hpp"
 #include "ISquad.hpp"
 #include "Squad.hpp"
+#include "Kamikaze.hpp"
 
 int main()
 {
@@ -79,6 +80,20 @@ int main()
 		cur->rangedAttack();
 		cur->meleeAttack();
 	}
+
+	std::cout << "\n\nOther derived class test!\n";
+	std::cout << "-----------------------------------------\n";
+	ISquad *kami = new Kamikaze;
+	std::cout << "Add new SpaceMarine\n";
+	for (int i= 0; i < reinforcements3.getCount(); ++i)
+	{	kami->push(reinforcements3.getUnit(i)->clone());
+		kami->getUnit(i)->battleCry();
+		std::cout  << "\n";
+	}
+	std::cout << "Squad has now " << kami->getCount() << " kamikaze to its Units\n\n";
+	std::cout << "Deleting Squad Kamikaze\n";
+	delete kami;
+
 	std::cout << "\nDeleting heap allocation:\n\n";
 	delete vlc;
 	delete bob;
