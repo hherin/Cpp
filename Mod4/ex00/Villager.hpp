@@ -1,34 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Victim.hpp                                         :+:      :+:    :+:   */
+/*   villager.hpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: heleneherin <heleneherin@student.42.fr>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/12/10 11:18:48 by heleneherin       #+#    #+#             */
-/*   Updated: 2020/12/16 11:51:10 by heleneherin      ###   ########.fr       */
+/*   Created: 2020/12/16 11:28:44 by heleneherin       #+#    #+#             */
+/*   Updated: 2020/12/16 11:51:16 by heleneherin      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef VICTIM_HPP
-# define VICTIM_HPP
+#ifndef VILLAGER_HPP
+# define VILLAGER_HPP
 
-#include <iostream>
+# include "Victim.hpp"
 
-class Victim
+class Villager : public Victim
 {
 	public:
-		Victim(std::string name="Kevin");
-		Victim(Victim const&);
-		virtual ~Victim();
-		Victim& operator=(Victim const&);
-		std::string& getName();
-		virtual void getPolymorphed() const;
-
-	protected:
-		std::string name;
+		Villager(std::string name="Kevin");
+		Villager(Villager const&);
+		~Villager();
+		Villager& operator=(Villager const&);
+		void screamQueen() const;
+		void getPolymorphed() const;
 };
-
-std::ostream& operator<<(std::ostream &os, Victim &obj);
 
 #endif

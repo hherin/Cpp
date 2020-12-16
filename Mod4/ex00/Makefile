@@ -1,10 +1,10 @@
 NAME	= Sorcerer
 
-SRCS	=	Sorcerer.cpp Victim.cpp Peon.cpp main.cpp
+SRCS	=	Villager.cpp Sorcerer.cpp Victim.cpp Peon.cpp main.cpp
 
 OBJS	=	${SRCS:.cpp=.o}
 
-HDRS	=	Sorcerer.hpp Victim.hpp Peon.hpp
+HDRS	=	Villager.hpp Sorcerer.hpp Victim.hpp Peon.hpp
 
 GCC		=	clang++
 
