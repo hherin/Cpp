@@ -6,29 +6,11 @@
 /*   By: heleneherin <heleneherin@student.42.fr>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/16 17:16:46 by heleneherin       #+#    #+#             */
-/*   Updated: 2020/12/17 16:23:16 by heleneherin      ###   ########.fr       */
+/*   Updated: 2020/12/17 17:07:42 by heleneherin      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Bureaucrat.hpp"
-
-class Bureaucrat::GradeTooHighException : public std::exception
-{
-	public:
-	GradeTooHighException() {}
-	const char *what() const throw (){
-		return "GRADE IS TOO HIGH\n";
-	}
-};
-
-class Bureaucrat::GradeTooLowException : public std::exception
-{
-	public:
-	GradeTooLowException(){}
-	const char *what() const throw (){
-		return "GRADE IS TOO LOW\n";
-	}
-};
 
 Bureaucrat::Bureaucrat(std::string n, int grd)
 	: _name(n)
