@@ -6,7 +6,7 @@
 /*   By: heleneherin <heleneherin@student.42.fr>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/17 16:26:08 by heleneherin       #+#    #+#             */
-/*   Updated: 2020/12/17 18:44:32 by heleneherin      ###   ########.fr       */
+/*   Updated: 2020/12/17 19:01:23 by heleneherin      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,9 @@
 
 # include <iostream>
 # include <exception>
+# include "Bureaucrat.hpp"
+
+class Bureaucrat;
 
 class Form
 {
@@ -29,6 +32,7 @@ class Form
 		bool getSign() const;
 		int getExecGrade() const;
 		int getSignGrade() const;
+		void beSigned(Bureaucrat const&);
 
 	private:
 		std::string const _name;

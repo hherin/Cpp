@@ -6,7 +6,7 @@
 /*   By: heleneherin <heleneherin@student.42.fr>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/17 11:41:38 by heleneherin       #+#    #+#             */
-/*   Updated: 2020/12/17 18:38:08 by heleneherin      ###   ########.fr       */
+/*   Updated: 2020/12/17 19:01:59 by heleneherin      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,6 +48,7 @@ int main(void)
 	Form bill2("bill2", 75, 100);
 	john.signForm(bill);
 	john.signForm(bill2);
+	bill2.beSigned(john);
 	std::cout << "\n-----------operator <<--------------\n";
 	std::cout << bill << bill2;
 }

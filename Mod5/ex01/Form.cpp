@@ -6,7 +6,7 @@
 /*   By: heleneherin <heleneherin@student.42.fr>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/17 16:52:35 by heleneherin       #+#    #+#             */
-/*   Updated: 2020/12/17 18:40:52 by heleneherin      ###   ########.fr       */
+/*   Updated: 2020/12/17 19:00:31 by heleneherin      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -53,6 +53,13 @@ int Form::getExecGrade() const
 int Form::getSignGrade() const
 {
 	return _signGrade;
+}
+
+void Form::beSigned(Bureaucrat const &b)
+{
+	if (b.getGrade() > _signGrade)
+		return ;
+	_sign = 1;
 }
 
 std::ostream& operator<<(std::ostream &op, Form const &f)

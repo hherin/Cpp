@@ -6,7 +6,7 @@
 /*   By: heleneherin <heleneherin@student.42.fr>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/16 16:18:40 by heleneherin       #+#    #+#             */
-/*   Updated: 2020/12/17 18:34:22 by heleneherin      ###   ########.fr       */
+/*   Updated: 2020/12/17 19:01:08 by heleneherin      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,8 @@
 # include <iostream>
 # include <exception>
 # include "Form.hpp"
+
+class Form;
 
 class Bureaucrat
 {
