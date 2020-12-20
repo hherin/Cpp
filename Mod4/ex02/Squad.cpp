@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Squad.cpp                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: user42 <user42@student.42.fr>              +#+  +:+       +#+        */
+/*   By: heleneherin <heleneherin@student.42.fr>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/11 11:32:23 by heleneherin       #+#    #+#             */
-/*   Updated: 2020/12/12 11:25:11 by user42           ###   ########.fr       */
+/*   Updated: 2020/12/20 16:17:28 by heleneherin      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,7 +34,6 @@ Squad const& Squad::operator=(Squad const &cp)
 		delete _squad[i];
 	nbUnits = cp.nbUnits;
 	ISpaceMarine **new_squad = new ISpaceMarine* [nbUnits];
-	std::cout << nbUnits << std::endl;
 	for (int i = 0; i < nbUnits; i++){
 		new_squad[i] = cp._squad[i]->clone();
 	}

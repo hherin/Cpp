@@ -6,7 +6,7 @@
 /*   By: heleneherin <heleneherin@student.42.fr>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/16 12:28:18 by heleneherin       #+#    #+#             */
-/*   Updated: 2020/12/16 13:33:24 by heleneherin      ###   ########.fr       */
+/*   Updated: 2020/12/20 16:16:56 by heleneherin      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,7 +35,6 @@ Kamikaze const& Kamikaze::operator=(Kamikaze const &cp)
 		delete _kami[i];
 	nbUnits = cp.nbUnits;
 	ISpaceMarine **new_kami = new ISpaceMarine* [nbUnits];
-	std::cout << nbUnits << std::endl;
 	for (int i = 0; i < nbUnits; i++){
 		new_kami[i] = cp._kami[i]->clone();
 	}
