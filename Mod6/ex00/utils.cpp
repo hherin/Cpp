@@ -6,7 +6,7 @@
 /*   By: heleneherin <heleneherin@student.42.fr>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/20 16:33:21 by heleneherin       #+#    #+#             */
-/*   Updated: 2020/12/21 16:41:20 by heleneherin      ###   ########.fr       */
+/*   Updated: 2020/12/22 11:00:40 by heleneherin      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,6 +49,11 @@ bool isPseudoLitterals(std::string const &s)
 	return 0;
 }
 
+// bool isOverflow(float nb)
+// {
+// 	if ()
+// }
+
 void pseudoProcess(std::string const &s)
 {
 	double n;
@@ -65,19 +70,4 @@ void pseudoProcess(std::string const &s)
 	std::cout << "int: impossible\n";
 	std::cout << "float: " << sign << static_cast<float>(n) << "f" << std::endl;
 	std::cout << "double: " << sign << static_cast<double>(n) << std::endl;
-}
-
-void everythingProcess(void *inp)
-{
-	std::cout << "char: ";
-	if (*(static_cast<int*>(inp)) < -127)
-		std::cout << "impossible\n";
-	else if (*(static_cast<int*>(inp)) < 32 || *(static_cast<int*>(inp)) > 127)
-		std::cout << "No displayable\n";
-	else
-		std::cout << *(static_cast<char*>(inp)) << std::endl;
-	std::cout << "int: ";
-	std::cout << *(static_cast<int*>(inp)) << std::endl;
-	std::cout << "float: " << *(static_cast<float*>(inp)) << "f" << std::endl;
-	std::cout << "double: " << *(static_cast<double*>(inp)) << std::endl;
 }

@@ -6,7 +6,7 @@
 /*   By: heleneherin <heleneherin@student.42.fr>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/20 16:19:39 by heleneherin       #+#    #+#             */
-/*   Updated: 2020/12/21 16:32:55 by heleneherin      ###   ########.fr       */
+/*   Updated: 2020/12/22 11:16:29 by heleneherin      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,21 +20,17 @@ int main(int ac, char **av)
 	}
 	std::string input = av[1];
 	std::cout << std::setprecision(1) << std::fixed;
-	if (input.size() == 1 && isalpha(input[0])){
-		char c = input[0];
-		everythingProcess(&c);
-	}
+	if (input.size() == 1 && isalpha(input[0]))
+		everythingProcess(input[0]);
 	else if (isAllDigit(input)){
-		int nb = atoi(input.c_str());
+	int nb = atoi(input.c_str());
 		if (MAX_INT_INPUT)
-			std::cout << "Input overload\n";
+			std::cout << "Input overflow\n";
 		else
-			everythingProcess(&nb);
+			everythingProcess(nb);
 	}
-	else if(isFloatDouble(input)){
-		double d = atof(input.c_str());
-		everythingProcess(&d);
-	}
+	else if(isFloatDouble(input))
+		everythingProcess(atof(input.c_str()));
 	else if (isPseudoLitterals(input))
 		pseudoProcess(input);
 	else{

@@ -6,7 +6,7 @@
 /*   By: heleneherin <heleneherin@student.42.fr>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/21 10:20:50 by heleneherin       #+#    #+#             */
-/*   Updated: 2020/12/21 16:41:51 by heleneherin      ###   ########.fr       */
+/*   Updated: 2020/12/22 11:19:26 by heleneherin      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,10 +23,28 @@
 
 #define MAX_INT_INPUT (input.size() >= 10 && isdigit(input[0]) && nb < 0) || (input.size() >= 11 && !isdigit(input[0]) && nb > 0)
 
-void	everythingProcess(void *inp);
 void	pseudoProcess(std::string const &s);
 bool	isAllDigit(std::string const &s);
 bool	isFloatDouble(std::string const &s);
 bool	isPseudoLitterals(std::string const &s);
+
+template<typename T>
+void everythingProcess(T inp)
+{
+	std::cout << "char: ";
+	if (static_cast<int>(inp) < -127)
+		std::cout << "impossible\n";
+	else if (static_cast<int>(inp) < 32 || static_cast<int>(inp) > 127)
+		std::cout << "No displayable\n";
+	else
+		std::cout << static_cast<char>(inp) << std::endl;
+	std::cout << "int: ";
+	if (static_cast<double>(INT_MIN) < inp || static_cast<double>(INT_MAX) > inp || (inp > 0 && static_cast<int>(inp) < 0) || (inp < 0 && static_cast<int>(inp) > 0))
+		std::cout << "overflow\n";
+	else
+		std::cout << static_cast<int>(inp) << std::endl;
+	std::cout << "float: " << static_cast<float>(inp) << "f" << std::endl;
+	std::cout << "double: " << static_cast<double>(inp) << std::endl;
+}
 
 #endif
