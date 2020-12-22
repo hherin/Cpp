@@ -6,7 +6,7 @@
 /*   By: heleneherin <heleneherin@student.42.fr>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/20 16:33:21 by heleneherin       #+#    #+#             */
-/*   Updated: 2020/12/22 11:00:40 by heleneherin      ###   ########.fr       */
+/*   Updated: 2020/12/22 11:26:26 by heleneherin      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,11 +48,6 @@ bool isPseudoLitterals(std::string const &s)
 		return 1;
 	return 0;
 }
-
-// bool isOverflow(float nb)
-// {
-// 	if ()
-// }
 
 void pseudoProcess(std::string const &s)
 {
