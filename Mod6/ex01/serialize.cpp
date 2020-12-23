@@ -6,12 +6,12 @@
 /*   By: heleneherin <heleneherin@student.42.fr>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/21 17:17:12 by heleneherin       #+#    #+#             */
-/*   Updated: 2020/12/21 17:47:43 by heleneherin      ###   ########.fr       */
+/*   Updated: 2020/12/23 15:31:18 by heleneherin      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <iostream>
-
+#include <cstdlib>
 void * serialize(void)
 {
 	char *ret = new char[20];
