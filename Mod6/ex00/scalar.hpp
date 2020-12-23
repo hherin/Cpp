@@ -6,7 +6,7 @@
 /*   By: heleneherin <heleneherin@student.42.fr>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/21 10:20:50 by heleneherin       #+#    #+#             */
-/*   Updated: 2020/12/22 11:19:26 by heleneherin      ###   ########.fr       */
+/*   Updated: 2020/12/23 15:21:34 by heleneherin      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,6 +19,7 @@
 # include <iomanip>
 # include <string.h>
 # include <limits>
+# include <limits.h>
 # include <math.h>
 
 #define MAX_INT_INPUT (input.size() >= 10 && isdigit(input[0]) && nb < 0) || (input.size() >= 11 && !isdigit(input[0]) && nb > 0)
@@ -39,7 +40,8 @@ void everythingProcess(T inp)
 	else
 		std::cout << static_cast<char>(inp) << std::endl;
 	std::cout << "int: ";
-	if (static_cast<double>(INT_MIN) < inp || static_cast<double>(INT_MAX) > inp || (inp > 0 && static_cast<int>(inp) < 0) || (inp < 0 && static_cast<int>(inp) > 0))
+	if (static_cast<double>(INT_MIN) > static_cast<double>(inp) || static_cast<double>(INT_MAX) < static_cast<double>(inp)
+		|| (inp > 0 && static_cast<int>(inp) < 0) || (inp < 0 && static_cast<int>(inp) > 0))
 		std::cout << "overflow\n";
 	else
 		std::cout << static_cast<int>(inp) << std::endl;
