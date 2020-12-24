@@ -6,7 +6,7 @@
 /*   By: heleneherin <heleneherin@student.42.fr>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/22 11:54:47 by heleneherin       #+#    #+#             */
-/*   Updated: 2020/12/24 21:23:24 by heleneherin      ###   ########.fr       */
+/*   Updated: 2020/12/24 21:25:34 by heleneherin      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,6 +46,4 @@ int main(void)
 	{
 		std::cout << e.what();
 	}
-
-
 }
