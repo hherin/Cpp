@@ -6,7 +6,7 @@
 /*   By: heleneherin <heleneherin@student.42.fr>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/22 11:54:47 by heleneherin       #+#    #+#             */
-/*   Updated: 2020/12/24 20:42:49 by heleneherin      ###   ########.fr       */
+/*   Updated: 2020/12/24 21:23:24 by heleneherin      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,10 +38,9 @@ int main(void)
 		std::cout << e.what();
 	}
 	std::cout << "new value: " << intArray[1] << std::endl;
-	std::cout << "\nold value: " << intArray[1] << std::endl;
+	std::cout << "\nexception: ";
 	try{
 		intArray[20] = 100;
-		std::cout << "new value: " << intArray[20] << std::endl;
 	}
 	catch(std::exception &e)
 	{

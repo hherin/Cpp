@@ -1,6 +1,6 @@
 NAME	=	Array
 
-SRCS	=	Array.cpp main.cpp
+SRCS	=	main.cpp
 
 OBJS	=	${SRCS:.cpp=.o}
 
