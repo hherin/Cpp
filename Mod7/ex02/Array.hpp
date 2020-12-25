@@ -6,7 +6,7 @@
 /*   By: heleneherin <heleneherin@student.42.fr>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/22 11:31:25 by heleneherin       #+#    #+#             */
-/*   Updated: 2020/12/24 20:38:55 by heleneherin      ###   ########.fr       */
+/*   Updated: 2020/12/25 01:05:56 by heleneherin      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,6 +23,7 @@ class Array
 		Array(unsigned int);
 		Array(Array const&);
 		Array operator=(Array const&);
+		// T operator=(T const &cp);
 		T& operator[](unsigned int);
 		const T& operator[](unsigned int index) const;
 		~Array();
@@ -49,6 +50,7 @@ Array<T>::Array()
 	: _size(0), _arr(0)
 {
 	_arr = new T;
+	_arr[0] = 0;
 }
 
 template<typename T>
@@ -56,6 +58,8 @@ Array<T>::Array(unsigned int sz)
 	: _size(sz), _arr(0)
 {
 	_arr = new T[sz];
+	for (unsigned int i = 0; i < _size; i++)
+		_arr[i] = 0;
 }
 
 template<typename T>
@@ -89,7 +93,7 @@ Array<T> Array<T>::operator=(Array<T> const &cp)
 template<typename T>
 T& Array<T>::operator[](unsigned int index)
 {
-	if (index > _size)
+	if (index >= _size)
 		throw IndexOutOfLimit();
 	return _arr[index];
 }
@@ -97,7 +101,7 @@ T& Array<T>::operator[](unsigned int index)
 template<typename T>
 const T& Array<T>::operator[](unsigned int index) const
 {
-	if (index > _size)
+	if (index >= _size)
 		throw IndexOutOfLimit();
 	return _arr[index];
 }
