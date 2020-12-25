@@ -3,44 +3,45 @@
 /*                                                        :::      ::::::::   */
 /*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: heleneherin <heleneherin@student.42.fr>    +#+  +:+       +#+        */
+/*   By: user42 <user42@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/22 11:54:47 by heleneherin       #+#    #+#             */
-/*   Updated: 2020/12/25 01:07:52 by heleneherin      ###   ########.fr       */
+/*   Updated: 2020/12/25 01:23:12 by user42           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <iostream>
 #include "Array.hpp"
+#include <string.h>
 
 int main(void)
 {
-	Array<char*> charObj(3);
-	Array<char*> emptyArray;
+	Array<std::string> stringObj(3);
+	Array<std::string> emptyArray;
 
-	char *elem1 = strdup("salut");
-	char *elem2 = strdup("cava");
-	char *elem3 = strdup("super bien");
+	std::string elem1 = "salut";
+	std::string elem2 = "cava";
+	std::string elem3 = "super bien";
 
-	Array<char*> copyObj(charObj);
+	Array<std::string> copyObj(stringObj);
 
-	std::cout << "\n----------Test operator= -----------\n";
+	std::cout << "----------Test operator= -----------\n";
 	std::cout << "default constructor: " << emptyArray.getSize() << std::endl;
-	std::cout << "constructor with param: " << charObj.getSize() << std::endl;
+	std::cout << "constructor with param: " << stringObj.getSize() << std::endl;
 	std::cout << "constructor copy test: " << copyObj.getSize() << std::endl;
 
-	std::cout << "-------------Test constructor-------------\n";
-	emptyArray = charObj;
+	std::cout << "\n-------------Test operator= -------------\n";
+	emptyArray = stringObj;
 	std::cout << "emptyArray new size: " << emptyArray.getSize() << std::endl;
 
 	std::cout << "\n-------------Test operator[]-----------\n";
 	try{
-		charObj[0] = strdup(elem1);
-		charObj[1] = strdup(elem2);
-		charObj[2] = strdup(elem3);
-		std::cout << "charObj[0]= " << charObj[0] << std::endl;
-		std::cout << "charObj[1]= " << charObj[1] << std::endl;
-		std::cout << "charObj[2]= " << charObj[2] << std::endl;
+		stringObj[0] = elem1;
+		stringObj[1] = elem2;
+		stringObj[2] = elem3;
+		std::cout << "stringObj[0]= " << stringObj[0] << std::endl;
+		std::cout << "stringObj[1]= " << stringObj[1] << std::endl;
+		std::cout << "stringObj[2]= " << stringObj[2] << std::endl;
 	}
 	catch(std::exception &e){
 		std::cout << e.what();
@@ -48,12 +49,9 @@ int main(void)
 
 	std::cout << "\nexception: ";
 	try{
-		charObj[20] = elem1;
+		stringObj[20] = elem1;
 	}
 	catch(std::exception &e){
 		std::cout << e.what();
 	}
-	for (unsigned int i = 0; i < 3; i++)
-		delete charObj[i];
-
 }
