@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Array.hpp                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: user42 <user42@student.42.fr>              +#+  +:+       +#+        */
+/*   By: heleneherin <heleneherin@student.42.fr>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/22 11:31:25 by heleneherin       #+#    #+#             */
-/*   Updated: 2020/12/25 01:21:54 by user42           ###   ########.fr       */
+/*   Updated: 2020/12/25 01:27:36 by heleneherin      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,6 @@ class Array
 		Array(unsigned int);
 		Array(Array const&);
 		Array operator=(Array const&);
-		// T operator=(T const &cp);
 		T& operator[](unsigned int);
 		const T& operator[](unsigned int index) const;
 		~Array();
@@ -50,7 +49,6 @@ Array<T>::Array()
 	: _size(0), _arr(0)
 {
 	_arr = new T;
-	// _arr[0] = 0;
 }
 
 template<typename T>
@@ -58,8 +56,6 @@ Array<T>::Array(unsigned int sz)
 	: _size(sz), _arr(0)
 {
 	_arr = new T[sz];
-	// for (unsigned int i = 0; i < _size; i++)
-	// 	_arr[i] = 0;
 }
 
 template<typename T>
