@@ -1,36 +1,37 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   whatever.hpp                                       :+:      :+:    :+:   */
+/*   classTest.hpp                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: heleneherin <heleneherin@student.42.fr>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/12/21 18:45:45 by heleneherin       #+#    #+#             */
-/*   Updated: 2020/12/28 12:26:59 by heleneherin      ###   ########.fr       */
+/*   Created: 2020/12/28 12:35:23 by heleneherin       #+#    #+#             */
+/*   Updated: 2020/12/28 12:55:35 by heleneherin      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef WHATEVER_HPP
-# define WHATEVER_HPP
+#ifndef CLASSTEST_HPP
+# define CLASSTEST_HPP
 
-template<typename T>
-void swap(T &t1, T &t2)
-{
-	T tmp = t1;
-	t1 = t2;
-	t2 = tmp;
-}
+#include <iostream>
 
-template<typename T>
-T& min(T &t1, T &t2)
+class Awesome
 {
-	return ((t1 < t2) ? t1 : t2);
-}
+	public:
+		Awesome( void ) : _n( 42 ) { return; }
+		int get( void ) const { return this->_n; }
 
-template<typename T>
-T& max(T &t1, T &t2)
+	private:
+		int _n;
+};
+
+std::ostream & operator<<( std::ostream & o, Awesome const & rhs ) { o << rhs.get(); return o; }
+
+template< typename T >
+void print(T const& x)
 {
-	return ((t1 > t2) ? t1 : t2);
+	std::cout << x << std::endl;
+	return;
 }
 
 #endif

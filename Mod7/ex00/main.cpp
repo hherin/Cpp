@@ -6,12 +6,15 @@
 /*   By: heleneherin <heleneherin@student.42.fr>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/21 18:46:23 by heleneherin       #+#    #+#             */
-/*   Updated: 2020/12/21 18:47:47 by heleneherin      ###   ########.fr       */
+/*   Updated: 2020/12/28 12:33:48 by heleneherin      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "whatever.hpp"
+#include "classTest.hpp"
 #include <iostream>
+
+std::ostream& operator<<(std::ostream &op, Awesome &awe);
 
 int main( void )
 {
@@ -27,4 +30,12 @@ int main( void )
 	std::cout << "c = " << c << ", d = " << d << std::endl;
 	std::cout << "min( c, d ) = " << ::min( c, d ) << std::endl;
 	std::cout << "max( c, d ) = " << ::max( c, d ) << std::endl;
-return 0; }
+
+	Awesome e(1);
+	Awesome f(2);
+	::swap( e, f );
+	std::cout << "e = " << e << ", f = " << f << std::endl;
+	std::cout << "min( e, f ) = " << ::min( e, f ) << std::endl;
+	std::cout << "max( e, f ) = " << ::max( e, f ) << std::endl;
+	return 0;
+}
