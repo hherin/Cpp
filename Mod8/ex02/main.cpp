@@ -6,7 +6,7 @@
 /*   By: heleneherin <heleneherin@student.42.fr>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/28 15:13:26 by heleneherin       #+#    #+#             */
-/*   Updated: 2020/12/29 17:05:06 by heleneherin      ###   ########.fr       */
+/*   Updated: 2021/01/01 20:16:02 by heleneherin      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -65,7 +65,7 @@ int main()
 		++it;
 	}
 	std::cout << std::endl;
-	std::cout << "iterator--: ";
+	std::cout << "reverseIte++: ";
 	MutantStack<int>::reverse_iterator rit = mstack.rbegin();
 	MutantStack<int>::reverse_iterator rite = mstack.rend();
 	while (rit != rite)
