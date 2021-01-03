@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Span.hpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: user42 <user42@student.42.fr>              +#+  +:+       +#+        */
+/*   By: heleneherin <heleneherin@student.42.fr>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/26 11:34:27 by heleneherin       #+#    #+#             */
-/*   Updated: 2020/12/29 17:16:34 by user42           ###   ########.fr       */
+/*   Updated: 2021/01/03 14:08:45 by heleneherin      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,7 @@
 # include <vector>
 # include <algorithm>
 # include <limits.h>
+# include <iostream>
 
 class Span
 {
@@ -33,7 +34,7 @@ class Span
 		class NoSpanToFind;
 
 	private:
-		unsigned int	_index;
+		unsigned int	_initSize;
 		std::vector<int> _span;
 };
 

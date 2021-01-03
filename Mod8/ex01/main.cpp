@@ -6,7 +6,7 @@
 /*   By: heleneherin <heleneherin@student.42.fr>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/26 11:32:31 by heleneherin       #+#    #+#             */
-/*   Updated: 2020/12/28 15:05:32 by heleneherin      ###   ########.fr       */
+/*   Updated: 2021/01/03 14:08:31 by heleneherin      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,9 +16,19 @@
 
 int main()
 {
-	Span sp = Span(5);
+	Span sp = Span(30);
 
 	std::cout << "----------Test exceptions--------------\n";
+	try{
+		sp.addNumber(-1);
+		sp.addNumber(3);
+		sp.addNumber(17);
+		sp.addNumber(9);
+		sp.addNumber(-20);
+	}
+	catch (std::exception &e){
+		std::cout << e.what() << std::endl;
+	}
 	try{
 		std::cout << "shortestSpan:\t" << sp.shortestSpan() << std::endl;
 	}
@@ -27,17 +37,6 @@ int main()
 	}
 	try{
 		std::cout << "longestSpan:\t" << sp.longestSpan() << std::endl;
-	}
-	catch (std::exception &e){
-		std::cout << e.what() << std::endl;
-	}
-	try{
-		sp.addNumber(5);
-		sp.addNumber(3);
-		sp.addNumber(17);
-		sp.addNumber(9);
-		sp.addNumber(11);
-		sp.addNumber(11);
 	}
 	catch (std::exception &e){
 		std::cout << e.what() << std::endl;
