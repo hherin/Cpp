@@ -6,7 +6,7 @@
 /*   By: heleneherin <heleneherin@student.42.fr>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/26 11:36:53 by heleneherin       #+#    #+#             */
-/*   Updated: 2021/01/03 14:08:37 by heleneherin      ###   ########.fr       */
+/*   Updated: 2021/01/03 15:43:17 by heleneherin      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -57,6 +57,7 @@ void Span::multiAddNumber(unsigned int addSize)
 {
 	unsigned int oldSize = _span.size();
 	bool except = false;
+
 	if (_initSize <= _span.size())
 		throw ArrayIsFull();
 	if (oldSize + addSize > _initSize && (except = true))
@@ -69,7 +70,7 @@ void Span::multiAddNumber(unsigned int addSize)
 
 int Span::shortestSpan(void)
 {
-	if (_initSize < 2)
+	if (_span.size() < 2)
 		throw NoSpanToFind();
 	int spanRet = INT_MAX;
 	for (unsigned int i = 1; i < _span.size(); i++){
@@ -82,7 +83,7 @@ int Span::shortestSpan(void)
 
 int Span::longestSpan(void)
 {
-	if (_initSize < 2)
+	if (_span.size() < 2)
 		throw NoSpanToFind();
 	return (_span[_span.size() - 1] - _span[0]);
 }
